@@ -1,11 +1,11 @@
 {
-    "name": "campus_crave",
-    "short_name": "campus_crave",
+    "name": "Campus Crave",
+    "short_name": "Campus Crave",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#131110",
+    "theme_color": "#FF8A3D",
+    "description": "Campus food delivery for NIT Silchar.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

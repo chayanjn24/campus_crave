@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
-import 'pages/welcome_page.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import 'app/router.dart';
+import 'app/theme.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: CampusCraveApp()));
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class CampusCraveApp extends ConsumerWidget {
+  const CampusCraveApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: WelcomePage(),
+  Widget build(BuildContext context, WidgetRef ref) {
+    return MaterialApp.router(
+      title: 'Campus Crave',
+      debugShowCheckedModeBanner: false,
+      theme: buildTheme(),
+      routerConfig: ref.watch(routerProvider),
     );
   }
 }
